@@ -5,7 +5,7 @@ img { max-width: 100%; height: auto; }
 .container { max-width: 1200px; margin: auto; }
 nav a { margin-right: 16px; }
 section { margin: 32px 0; }
-.hero-visual img { width: 160px; height: 160px; }
+.hero-visual img { width: 160px; height: 160px; border-radius: 50%; }
 .portfolio-list { list-style: none; padding: 0; }
 .work-cover { display: none; }
 .skip-link { display: none; }
