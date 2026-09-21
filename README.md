@@ -1,4 +1,4 @@
-﻿# 项目 1 · 第 3 课课堂操作手册
+# 项目 1 · 第 3 课课堂操作手册
 
 ## Trae IDE、双入口、3×45 分钟完成开发与上线
 
@@ -107,6 +107,7 @@ https://ffd-p1-web-v2-20260918.netlify.app/lesson-03/
 打开 CMD：
 
 ```bat
+REM 按从上到下的顺序执行；每条命令的具体作用结合本节文字说明理解。
 mkdir "%USERPROFILE%\Desktop\web-work"
 cd /d "%USERPROFILE%\Desktop\web-work"
 git clone https://github.com/你的用户名/p1-lesson-02-学号.git p1-lesson-03
@@ -125,6 +126,7 @@ git branch -M main
 路线 A 还要领取教师提供的本课任务文件：
 
 ```bat
+REM 按从上到下的顺序执行；每条命令的具体作用结合本节文字说明理解。
 git remote add course https://github.com/02-gdit-ffd-20260818/ffd-student-course-kit.git
 git fetch course p1-l03-standalone-v3.0
 git checkout course/p1-l03-standalone-v3.0 -- lesson-03-task.css
@@ -141,6 +143,7 @@ git checkout course/p1-l03-standalone-v3.0 -- lesson-03-task.css
 ### 路线 B：克隆教师完整模板
 
 ```bat
+REM 按从上到下的顺序执行；每条命令的具体作用结合本节文字说明理解。
 mkdir "%USERPROFILE%\Desktop\web-work"
 cd /d "%USERPROFILE%\Desktop\web-work"
 git clone --branch p1-l03-standalone-v3.0 --single-branch https://github.com/02-gdit-ffd-20260818/ffd-student-course-kit.git p1-lesson-03
@@ -490,6 +493,7 @@ p1-lesson-03-new
 当前终端不在工程目录。CMD：
 
 ```bat
+REM 按从上到下的顺序执行；每条命令的具体作用结合本节文字说明理解。
 cd /d "%USERPROFILE%\Desktop\web-work\p1-lesson-03"
 ```
 
@@ -544,6 +548,7 @@ git push -u origin main
 CMD：
 
 ```bat
+REM 按从上到下的顺序执行；每条命令的具体作用结合本节文字说明理解。
 mkdir "%USERPROFILE%\Desktop\web-work" 2>nul
 cd /d "%USERPROFILE%\Desktop\web-work"
 dir
@@ -552,6 +557,8 @@ dir
 PowerShell 或 Trae 终端：
 
 ```powershell
+
+# 按从上到下的顺序执行；每条命令的具体作用结合本节文字说明理解。
 New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\Desktop\web-work"
 Set-Location "$env:USERPROFILE\Desktop\web-work"
 Get-Location
@@ -568,6 +575,8 @@ Get-Location
 ### 克隆命令
 
 ```bash
+
+# 按从上到下的顺序执行；每条命令的具体作用结合本节文字说明理解。
 git clone --branch 本课分支 --single-branch 仓库网址 本课文件夹
 ```
 
@@ -579,6 +588,8 @@ git clone --branch 本课分支 --single-branch 仓库网址 本课文件夹
 ### 统一启动命令
 
 ```bash
+
+# 按从上到下的顺序执行；每条命令的具体作用结合本节文字说明理解。
 npx live-server --port=7000 --host=0.0.0.0
 ```
 
@@ -591,6 +602,8 @@ npx live-server --port=7000 --host=0.0.0.0
 ### Git 提交命令
 
 ```bash
+
+# 按从上到下的顺序执行；每条命令的具体作用结合本节文字说明理解。
 git remote -v
 git status
 git add .
@@ -609,6 +622,8 @@ git push
 从教师模板开始的学生先在 GitHub 或 Gitee 建立空仓库，再执行：
 
 ```bash
+
+# 按从上到下的顺序执行；每条命令的具体作用结合本节文字说明理解。
 git remote rename origin teacher
 git remote add origin <自己的空仓库网址>
 git branch -M main
@@ -616,6 +631,7 @@ git push -u origin main
 ```
 
 `rename` 保留教师地址供查看；`add origin` 把默认推送目标改成学生自己的仓库；`-u` 建立后续默认跟踪关系。
+
 ## 5 个 TODO 的前后变化与代码解释
 
 1. **A1 `display: grid`**：操作前是 block 单列；grid 启用二维网格；操作后作品开始按网格排列。
@@ -636,4 +652,3 @@ git push -u origin main
 - `translateY(-4px)` 中，`Y` 是垂直轴，负数向上，`4px` 是移动距离；它不会重新排列周围元素。
 - `180ms` 等于 0.18 秒；`transition` 让属性变化在这段时间内逐步完成。
 - `:hover` 是鼠标悬停状态；`:focus-within` 是元素自身或其后代获得键盘焦点的状态。
-
